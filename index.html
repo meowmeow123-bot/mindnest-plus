@@ -1,150 +1,29 @@
-<!-- MindNest+ - Full Mental Health Website -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MindNest+</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background: #e0f2f1;
-    }
-    header, footer {
-      background-color: #00695c;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-    nav a {
-      color: #b2dfdb;
-      margin: 0 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 2rem;
-      background: white;
-      margin: 1rem auto;
-      max-width: 800px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .mood-option {
-      font-size: 2rem;
-      cursor: pointer;
-      margin: 0 0.5rem;
-    }
-    textarea {
-      width: 100%;
-      height: 100px;
-      padding: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-    .circle {
-      width: 100px;
-      height: 100px;
-      background-color: #80cbc4;
-      margin: 1rem auto;
-      border-radius: 50%;
-      transition: transform 4s ease-in-out;
-    }
-    .btn {
-      padding: 0.5rem 1rem;
-      background-color: #00796b;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1>MindNest+ 🌿</h1>
     <nav>
-      <a href="#mood">Mood</a>
-      <a href="#journal">Journal</a>
-      <a href="#breathing">Breathing</a>
-      <a href="#affirmation">Affirmation</a>
+      <a href="index.html">Home</a>
+      <a href="articles.html">Articles</a>
+      <a href="music.html">Meditation Music</a>
+      <a href="quizzes.html">Quizzes</a>
     </nav>
   </header>
-
-  <section id="mood">
-    <h2>🧠 How are you feeling today?</h2>
-    <div>
-      <span class="mood-option" onclick="selectMood('😔')">😔</span>
-      <span class="mood-option" onclick="selectMood('😐')">😐</span>
-      <span class="mood-option" onclick="selectMood('🙂')">🙂</span>
-      <span class="mood-option" onclick="selectMood('😄')">😄</span>
-      <span class="mood-option" onclick="selectMood('🤩')">🤩</span>
-    </div>
-    <p id="selectedMood" style="margin-top:1rem; font-weight: bold;"></p>
-  </section>
-
-  <section id="journal">
-    <h2>📓 Journal Your Thoughts</h2>
-    <textarea id="journalEntry" placeholder="Type here..."></textarea>
-    <br>
-    <button class="btn" onclick="saveJournal()">Save</button>
-    <p id="saveMsg"></p>
-  </section>
-
-  <section id="breathing">
-    <h2>🌬️ Breathing Exercise</h2>
-    <div class="circle" id="circle"></div>
-    <button class="btn" onclick="startBreathing()">Start Breathing</button>
-  </section>
-
-  <section id="affirmation">
-    <h2>🌈 Today's Affirmation</h2>
-    <p id="affirmationText" style="font-style: italic;"></p>
-  </section>
-
+  <main>
+    <section>
+      <h2>Welcome to MindNest+</h2>
+      <p>Your safe space to breathe, reflect, and grow. Explore our mental wellness tools and content below.</p>
+    </section>
+  </main>
   <footer>
-    <p>© 2025 MindNest+ – Breathe. Reflect. Grow.</p>
+    <p>© 2025 MindNest+</p>
   </footer>
-
-  <script>
-    function selectMood(mood) {
-      document.getElementById("selectedMood").textContent = "You selected: " + mood;
-    }
-
-    function saveJournal() {
-      const entry = document.getElementById("journalEntry").value;
-      if (entry.trim()) {
-        localStorage.setItem("mindnest_entry", entry);
-        document.getElementById("saveMsg").textContent = "Saved successfully!";
-      } else {
-        document.getElementById("saveMsg").textContent = "Please write something.";
-      }
-    }
-
-    function startBreathing() {
-      const circle = document.getElementById("circle");
-      circle.style.transform = "scale(1.5)";
-      setTimeout(() => {
-        circle.style.transform = "scale(1)";
-      }, 4000);
-    }
-
-    function showAffirmation() {
-      const affirmations = [
-        "You are strong and capable.",
-        "This moment is enough.",
-        "You are worthy of peace.",
-        "Let go. Breathe in calm.",
-        "You matter. Always."
-      ];
-      const day = new Date().getDate();
-      document.getElementById("affirmationText").textContent = affirmations[day % affirmations.length];
-    }
-
-    document.addEventListener("DOMContentLoaded", showAffirmation);
-  </script>
 </body>
 </html>

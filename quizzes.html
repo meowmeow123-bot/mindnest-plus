@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quizzes - MindNest+</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Self-Assessment Quizzes 📝</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <form id="anxietyQuiz">
+      <h2>Anxiety Quiz</h2>
+      <label>Do you feel nervous or anxious frequently?
+        <input type="radio" name="q1" value="yes"> Yes
+        <input type="radio" name="q1" value="no"> No
+      </label><br/>
+      <label>Do you have trouble relaxing?
+        <input type="radio" name="q2" value="yes"> Yes
+        <input type="radio" name="q2" value="no"> No
+      </label><br/>
+      <button type="button" onclick="submitQuiz()">Submit</button>
+      <p id="quizResult"></p>
+    </form>
+  </main>
+  <footer>
+    <p>© 2025 MindNest+</p>
+  </footer>
+  <script>
+    function submitQuiz() {
+      const q1 = document.querySelector('input[name="q1"]:checked');
+      const q2 = document.querySelector('input[name="q2"]:checked');
+      if (!q1 || !q2) {
+        document.getElementById("quizResult").textContent = "Please answer all questions.";
+      } else {
+        const score = [q1.value, q2.value].filter(ans => ans === "yes").length;
+        document.getElementById("quizResult").textContent =
+          score === 0 ? "Low Anxiety" : score === 1 ? "Mild Anxiety" : "High Anxiety";
+      }
+    }
+  </script>
+</body>
+</html>
