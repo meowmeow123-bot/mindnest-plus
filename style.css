@@ -1,27 +1,31 @@
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffe6f0;
   margin: 0;
   padding: 0;
-  background: #f0f8f6;
+  color: #333;
 }
-header, footer {
-  background-color: #00695c;
-  color: white;
+header {
+  background: #ffc1cc;
+  padding: 20px;
   text-align: center;
-  padding: 1em 0;
+}
+header h1 {
+  margin: 0;
 }
 nav a {
   margin: 0 10px;
-  color: #c8e6c9;
+  color: #6a1b9a;
   text-decoration: none;
+  font-weight: bold;
 }
 main {
-  padding: 2em;
+  padding: 20px;
+  text-align: center;
 }
-section {
-  margin-bottom: 2em;
-}
-article {
-  margin-bottom: 1.5em;
+footer {
+  background: #ffdce5;
+  text-align: center;
+  padding: 10px;
 }
