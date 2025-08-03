@@ -1,58 +1,11 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MindNest+ | Anxiety Quiz</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>MindNest+ Quiz</title>
 </head>
 <body>
-  <header><h1>🧾 Anxiety Self-Check</h1></header>
-  <main>
-    <form id="quizForm">
-      <p>1. I feel nervous or on edge most of the time.<br>
-        <input type="radio" name="q1" value="2"> Often
-        <input type="radio" name="q1" value="1"> Sometimes
-        <input type="radio" name="q1" value="0"> Rarely
-      </p>
-      <p>2. I have trouble relaxing or sleeping well.<br>
-        <input type="radio" name="q2" value="2"> Often
-        <input type="radio" name="q2" value="1"> Sometimes
-        <input type="radio" name="q2" value="0"> Rarely
-      </p>
-      <p>3. I overthink situations or decisions.<br>
-        <input type="radio" name="q3" value="2"> Often
-        <input type="radio" name="q3" value="1"> Sometimes
-        <input type="radio" name="q3" value="0"> Rarely
-      </p>
-      <p>4. I feel physical tension (tight chest, sweating, restlessness).<br>
-        <input type="radio" name="q4" value="2"> Often
-        <input type="radio" name="q4" value="1"> Sometimes
-        <input type="radio" name="q4" value="0"> Rarely
-      </p>
-      <p>5. I avoid situations because they make me anxious.<br>
-        <input type="radio" name="q5" value="2"> Often
-        <input type="radio" name="q5" value="1"> Sometimes
-        <input type="radio" name="q5" value="0"> Rarely
-      </p>
-      <button type="button" onclick="calculateScore()">See Result</button>
-    </form>
-    <p id="resultText"></p>
-  </main>
-  <script>
-    function calculateScore() {
-      let total = 0;
-      for (let i = 1; i <= 5; i++) {
-        let val = document.querySelector('input[name="q' + i + '"]:checked');
-        if (val) total += parseInt(val.value);
-      }
-      const result = document.getElementById("resultText");
-      if (total >= 8) result.innerText = "😟 You may be experiencing moderate to high anxiety. Consider self-care or talking to someone you trust.";
-      else if (total >= 4) result.innerText = "😐 Mild anxiety symptoms detected. Mindfulness and journaling may help.";
-      else result.innerText = "😊 You seem to be managing well. Keep up the good habits!";
-    }
-  </script>
-  <footer><p>© 2025 MindNest+</p></footer>
+  <h2>Mental Health Quiz</h2>
+  <p>Take a short quiz to assess your well-being.</p>
 </body>
 </html>
