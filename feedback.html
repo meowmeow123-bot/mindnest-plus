@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Feedback</title><link rel="stylesheet" href="style.css"></head>
+<body><h2>Your Feedback</h2>
+<form onsubmit="submitForm(); return false;">
+  Name: <input type="text" required><br>
+  Mood (1-5): <input type="number" min="1" max="5"><br>
+  Message: <textarea required></textarea><br>
+  <button type="submit">Submit</button>
+</form>
+<p id="thankyou" style="display:none;">Thank you for your feedback!</p>
+<script>
+function submitForm() {
+  document.getElementById('thankyou').style.display = 'block';
+}
+</script></body></html>

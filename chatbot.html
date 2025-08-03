@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>MindNest+ Chatbot</title><link rel="stylesheet" href="style.css"></head>
+<body><h2>Chatbot</h2>
+<div id="chatbox" style="border:1px solid #ccc;padding:1em;height:300px;overflow-y:auto;"></div>
+<input type="text" id="userInput" placeholder="How are you feeling?" style="width:80%;"><button onclick="talk()">Send</button>
+<script>
+function talk() {
+  var input = document.getElementById('userInput').value.toLowerCase();
+  var reply = '';
+  if(input.includes("sad") || input.includes("depressed")) reply = "I'm here for you. Try this breathing exercise?";
+  else if(input.includes("affirmation")) reply = "You are enough. You're doing your best.";
+  else if(input.includes("anxious") || input.includes("stress")) reply = "Breathe with me. Inhale 4... Hold... Exhale 4...";
+  else reply = "I'm listening. Tell me more.";
+  var chat = document.getElementById('chatbox');
+  chat.innerHTML += "<div><b>You:</b> " + input + "</div>";
+  chat.innerHTML += "<div><b>Bot:</b> " + reply + "</div>";
+  document.getElementById('userInput').value = '';
+  chat.scrollTop = chat.scrollHeight;
+}
+</script></body></html>

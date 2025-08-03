@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>Mental Health Quiz</title><link rel="stylesheet" href="style.css"></head>
+<body><h2>20-Question Mental Health Quiz</h2><form id="quizForm">
+<p>1. Do you feel anxious often? <input type="range" name="q1" min="0" max="4"></p>
+<p>2. Do you struggle to focus? <input type="range" name="q2" min="0" max="4"></p>
+<!-- More questions up to 20 like above -->
+<button type="button" onclick="submitQuiz()">Submit</button></form>
+<div id="result"></div>
+<script>
+function submitQuiz() {
+  let total = 0;
+  for(let i=1; i<=2; i++) total += parseInt(document.forms['quizForm']['q'+i].value);
+  let result = "You're doing okay. Stay aware."; if(total >= 6) result = "You may be under stress. Try meditation.";
+  document.getElementById('result').innerText = result;
+}
+</script></body></html>
