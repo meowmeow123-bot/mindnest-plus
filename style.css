@@ -1,37 +1,67 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f2f2f2;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-}
-
-.chat-container {
-  width: 400px;
-  background: white;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff0f5;
   padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin: 0;
+  color: #333;
 }
 
-#chat-box {
-  height: 300px;
-  overflow-y: scroll;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
+header {
+  text-align: center;
+  background: #ffb6c1;
+  padding: 20px;
 }
 
-#user-input {
-  width: 70%;
-  padding: 10px;
+nav button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #e91e63;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+}
+
+article {
+  background: #fff;
+  margin: 15px 0;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+#quiz-form p {
+  margin-top: 10px;
 }
 
 button {
-  width: 25%;
-  padding: 10px;
   background: #e91e63;
   color: white;
   border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+#chat-box {
+  height: 200px;
+  border: 1px solid #ccc;
+  overflow-y: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+#result {
+  background: #ffe4e1;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  display: none;
 }
