@@ -1,62 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>MindNest+ | Mental Health Platform</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Welcome to MindNest+</h1>
-    <nav>
-      <button onclick="showSection('articles')">Articles</button>
-      <button onclick="showSection('quiz')">Quiz</button>
-      <button onclick="showSection('chatbot')">Chatbot</button>
-    </nav>
-  </header>
-
-  <main>
-    <section id="articles">
-      <h2>Articles on Mental Health</h2>
-      <article>
-        <h3>Understanding Anxiety: A Modern Struggle</h3>
-        <p>Anxiety is more than just feeling stressed or worried. While occasional anxiety is a normal part of life, chronic anxiety can interfere with daily functioning. It can present as excessive worry, irritability, sleep disturbances, and physical symptoms like headaches or a racing heart. The causes can vary — from genetics and brain chemistry to life events and trauma. Understanding anxiety means recognizing the signs, knowing it's treatable, and seeking help when needed. Therapy, mindfulness, regular exercise, and sometimes medication are proven methods to manage anxiety effectively. You are not alone, and with the right support, relief is possible.</p>
-      </article>
-      <article>
-        <h3>Why Self-Care is Not Selfish</h3>
-        <p>In our fast-paced world, taking time for yourself might feel like a luxury or even a selfish act. But self-care is essential for your mental health. It helps recharge your emotional batteries, prevent burnout, and maintain balance in your personal and professional life. Self-care can be as simple as taking a walk, reading a book, journaling, or practicing meditation. It allows your mind to rest and your body to heal. Remember, you can’t pour from an empty cup — caring for yourself helps you care better for others. Make it a daily habit, not a rare treat.</p>
-      </article>
-      <article>
-        <h3>The Power of Talking About Your Feelings</h3>
-        <p>Bottling up emotions can weigh you down. Talking about your feelings with someone you trust can be incredibly healing. Whether it’s a friend, family member, or therapist, expressing what’s on your mind can relieve emotional pressure and bring clarity. It doesn’t make you weak — it makes you human. Mental health thrives in environments where people feel safe to speak up without judgment. If you’re struggling, don’t keep it to yourself. A simple conversation can lead to support, understanding, and even solutions. Speak, share, and know that your voice matters in your healing journey.</p>
-      </article>
-    </section>
-
-    <section id="quiz" style="display:none;">
-      <h2>Self-Assessment Quiz</h2>
-      <form id="quiz-form"></form>
-      <button onclick="submitQuiz()">Submit</button>
-      <div id="result"></div>
-    </section>
-
-    <section id="chatbot" style="display:none;">
-      <h2>Chatbot Assistant</h2>
-      <div id="chat-box"></div>
-      <input type="text" id="user-input" placeholder="Ask something..." />
-      <button onclick="sendMessage()">Send</button>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 MindNest+ | Mental Health Resources</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MindNest+</title>
@@ -137,3 +81,180 @@
   </footer>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💨 Breathing Exercise</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .circle {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background-color: #f9a8d4;
+      animation: breathe 8s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.5); }
+    }
+  </style>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans text-center p-10">
+  <h1 class="text-4xl font-bold mb-6">💨 Breathing Exercise</h1>
+  <p class="mb-4">Breathe in... Hold... Breathe out... 🌬️</p>
+  <div class="flex justify-center items-center h-96">
+    <div class="circle"></div>
+  </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>😊 Mood Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">😊 Mood Tracker</h1>
+  <form class="max-w-md mx-auto">
+    <label class="block mb-4">
+      How are you feeling today?
+      <select class="w-full mt-2 p-2 border rounded">
+        <option>😀 Happy</option>
+        <option>😐 Neutral</option>
+        <option>😟 Sad</option>
+        <option>😠 Angry</option>
+        <option>😰 Anxious</option>
+      </select>
+    </label>
+    <button class="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-500">Submit</button>
+  </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🧠 Mental Health Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">🧠 Mental Health Quiz</h1>
+  <form class="max-w-2xl mx-auto space-y-6">
+    <div>
+      <label>1. Do you often feel overwhelmed or anxious?</label><br>
+      <select class="w-full mt-2 p-2 border rounded">
+        <option>Never</option>
+        <option>Sometimes</option>
+        <option>Often</option>
+        <option>Always</option>
+      </select>
+    </div>
+    <div>
+      <label>2. Have you lost interest in activities you usually enjoy?</label><br>
+      <select class="w-full mt-2 p-2 border rounded">
+        <option>No</option>
+        <option>Yes, occasionally</option>
+        <option>Yes, frequently</option>
+      </select>
+    </div>
+    <div>
+      <label>3. Do you experience trouble sleeping or excessive sleep?</label><br>
+      <select class="w-full mt-2 p-2 border rounded">
+        <option>Rarely</option>
+        <option>Sometimes</option>
+        <option>Often</option>
+      </select>
+    </div>
+    <button type="submit" class="bg-pink-400 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
+  </form>
+  <p class="text-center mt-6 font-semibold">🌟 You are doing your best. Keep going!</p>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>📖 Mental Health Article</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">📖 Mental Health Article</h1>
+  <article class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-semibold mb-2">The Power of Taking a Break</h2>
+    <p>In today’s fast-paced world, mental burnout is common. Taking regular breaks helps recharge your mind, improve focus, and enhance emotional resilience. Even a few minutes of deep breathing or stepping outside can reset your mood. Your mental health matters—be kind to yourself. 💖</p>
+  </article>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💬 MindBot Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #chatbox { height: 400px; overflow-y: scroll; }
+  </style>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">💬 Talk to MindBot</h1>
+  <div class="max-w-xl mx-auto bg-white p-4 rounded shadow">
+    <div id="chatbox" class="mb-4 p-2 h-96 bg-gray-50 rounded overflow-y-auto">
+      <p><strong>🤖 MindBot:</strong> Hi! I'm here for you. How are you feeling today? 💖</p>
+    </div>
+    <input id="userInput" type="text" placeholder="Type your message..." class="w-full p-2 border rounded mb-2" />
+    <button onclick="sendMessage()" class="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-500 w-full">Send</button>
+  </div>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
+      const userText = input.value.trim();
+      if (!userText) return;
+      chatbox.innerHTML += `<p><strong>🧍 You:</strong> ${userText}</p>`;
+      let reply = "🌟 You're not alone. Everything will be okay.";
+      if (userText.toLowerCase().includes("sad")) reply = "💗 It's okay to feel sad. Want to try a breathing exercise?";
+      if (userText.toLowerCase().includes("anxious")) reply = "🧘‍♀️ Try the 4-7-8 breathing technique. You're doing great.";
+      if (userText.toLowerCase().includes("happy")) reply = "😊 That’s wonderful! Keep shining! ✨";
+      chatbox.innerHTML += `<p><strong>🤖 MindBot:</strong> ${reply}</p>`;
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>💌 Feedback</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">💌 Share Your Feedback</h1>
+  <form class="max-w-xl mx-auto space-y-4">
+    <label class="block">
+      Name:
+      <input type="text" class="w-full mt-1 p-2 border rounded" />
+    </label>
+    <label class="block">
+      Your Experience:
+      <textarea class="w-full mt-1 p-2 border rounded" rows="5"></textarea>
+    </label>
+    <button type="submit" class="bg-pink-400 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
+  </form>
+</body>
+</html>
+<!-- Navigation -->
+<a href="#quiz">🧠 Quiz</a>
+<a href="#breathing">💨 Breathing</a>
+<a href="#chatbot">💬 Chatbot</a>
+...
+
+<!-- All sections below -->
+<section id="quiz"> ... Quiz content ... </section>
+<section id="breathing"> ... Breathing content ... </section>
+<section id="chatbot"> ... Chatbot content ... </section>
+...
