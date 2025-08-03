@@ -57,47 +57,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>🌸 MindNest+ Hub</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MindNest+</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html { scroll-behavior: smooth; }
-    #contentFrame {
-      width: 100%;
-      height: 85vh;
-      border: none;
+    html {
+      scroll-behavior: smooth;
     }
   </style>
 </head>
-<body class="bg-pink-100 font-sans text-gray-800">
+<body class="bg-pink-100 text-gray-800 font-sans">
   <!-- Header -->
-  <header class="bg-pink-300 text-white p-4 sticky top-0 z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto flex justify-between items-center">
+  <header class="bg-pink-300 text-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
       <h1 class="text-2xl font-bold">🌸 MindNest+</h1>
       <nav class="space-x-4">
-        <button onclick="loadPage('home.html')" class="hover:underline">🏠 Home</button>
-        <button onclick="loadPage('quiz.html')" class="hover:underline">🧠 Quiz</button>
-        <button onclick="loadPage('breathing.html')" class="hover:underline">💨 Breathing</button>
-        <button onclick="loadPage('mood.html')" class="hover:underline">😊 Mood</button>
-        <button onclick="loadPage('articles.html')" class="hover:underline">📖 Articles</button>
-        <button onclick="loadPage('chatbot.html')" class="hover:underline">💬 Chatbot</button>
-        <button onclick="loadPage('feedback.html')" class="hover:underline">💌 Feedback</button>
+        <a href="#breathing" class="hover:underline">💨 Breathing</a>
+        <a href="#mood" class="hover:underline">😊 Mood</a>
+        <a href="#quiz" class="hover:underline">🧠 Quiz</a>
+        <a href="#articles" class="hover:underline">📖 Articles</a>
+        <a href="#chatbot" class="hover:underline">💬 Chatbot</a>
+        <a href="#feedback" class="hover:underline">💌 Feedback</a>
       </nav>
     </div>
   </header>
 
-  <!-- Display Area -->
-  <main class="max-w-6xl mx-auto mt-6">
-    <iframe id="contentFrame" src="home.html"></iframe>
-  </main>
-
-  <script>
-    function loadPage(page) {
-      document.getElementById("contentFrame").src = page;
-    }
-  </script>
-</body>
-</html>
   <!-- Hero Section -->
   <section class="text-center py-20 bg-pink-200">
     <h2 class="text-4xl font-bold mb-4">Welcome to MindNest+</h2>
@@ -152,25 +137,3 @@
   </footer>
 </body>
 </html>
-<nav class="space-x-4">
-  <button onclick="loadPage('home.html')" class="hover:underline">🏠 Home</button>
-  <button onclick="loadPage('quiz.html')" class="hover:underline">🧠 Quiz</button>
-  <button onclick="loadPage('breathing.html')" class="hover:underline">💨 Breathing</button>
-  <button onclick="loadPage('mood.html')" class="hover:underline">😊 Mood</button>
-  <button onclick="loadPage('articles.html')" class="hover:underline">📖 Articles</button>
-  <button onclick="loadPage('chatbot.html')" class="hover:underline">💬 Chatbot</button>
-  <button onclick="loadPage('feedback.html')" class="hover:underline">💌 Feedback</button>
-</nav>
-<!-- Display Area for Dynamic Pages -->
-<main class="max-w-6xl mx-auto mt-6">
-  <iframe id="contentFrame" src="home.html" style="width:100%; height:85vh; border:none;"></iframe>
-</main>
-
-<script>
-  function loadPage(page) {
-    document.getElementById("contentFrame").src = page;
-  }
-</script>
-</body>
-</html>
-
