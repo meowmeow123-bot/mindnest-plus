@@ -1,9 +1,0 @@
-<!DOCTYPE html>
-<html><head><meta charset="UTF-8"><title>Mood Booster</title><link rel="stylesheet" href="style.css"></head>
-<body><h2>Lift Your Mood</h2><button onclick="boost()">Click Me</button><p id="message"></p>
-<script>
-const affirmations = ["You are doing great!", "Today is a fresh start.", "You have value.", "You are loved."];
-function boost() {
-  document.getElementById('message').innerText = affirmations[Math.floor(Math.random() * affirmations.length)];
-}
-</script></body></html>
