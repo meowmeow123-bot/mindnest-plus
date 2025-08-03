@@ -1,6 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>MindNest+ | Mental Health Platform</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome to MindNest+</h1>
+    <nav>
+      <button onclick="showSection('articles')">Articles</button>
+      <button onclick="showSection('quiz')">Quiz</button>
+      <button onclick="showSection('chatbot')">Chatbot</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="articles">
+      <h2>Articles on Mental Health</h2>
+      <article>
+        <h3>Understanding Anxiety: A Modern Struggle</h3>
+        <p>Anxiety is more than just feeling stressed or worried. While occasional anxiety is a normal part of life, chronic anxiety can interfere with daily functioning. It can present as excessive worry, irritability, sleep disturbances, and physical symptoms like headaches or a racing heart. The causes can vary — from genetics and brain chemistry to life events and trauma. Understanding anxiety means recognizing the signs, knowing it's treatable, and seeking help when needed. Therapy, mindfulness, regular exercise, and sometimes medication are proven methods to manage anxiety effectively. You are not alone, and with the right support, relief is possible.</p>
+      </article>
+      <article>
+        <h3>Why Self-Care is Not Selfish</h3>
+        <p>In our fast-paced world, taking time for yourself might feel like a luxury or even a selfish act. But self-care is essential for your mental health. It helps recharge your emotional batteries, prevent burnout, and maintain balance in your personal and professional life. Self-care can be as simple as taking a walk, reading a book, journaling, or practicing meditation. It allows your mind to rest and your body to heal. Remember, you can’t pour from an empty cup — caring for yourself helps you care better for others. Make it a daily habit, not a rare treat.</p>
+      </article>
+      <article>
+        <h3>The Power of Talking About Your Feelings</h3>
+        <p>Bottling up emotions can weigh you down. Talking about your feelings with someone you trust can be incredibly healing. Whether it’s a friend, family member, or therapist, expressing what’s on your mind can relieve emotional pressure and bring clarity. It doesn’t make you weak — it makes you human. Mental health thrives in environments where people feel safe to speak up without judgment. If you’re struggling, don’t keep it to yourself. A simple conversation can lead to support, understanding, and even solutions. Speak, share, and know that your voice matters in your healing journey.</p>
+      </article>
+    </section>
+
+    <section id="quiz" style="display:none;">
+      <h2>Self-Assessment Quiz</h2>
+      <form id="quiz-form"></form>
+      <button onclick="submitQuiz()">Submit</button>
+      <div id="result"></div>
+    </section>
+
+    <section id="chatbot" style="display:none;">
+      <h2>Chatbot Assistant</h2>
+      <div id="chat-box"></div>
+      <input type="text" id="user-input" placeholder="Ask something..." />
+      <button onclick="sendMessage()">Send</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 MindNest+ | Mental Health Resources</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>MindNest+</title>
