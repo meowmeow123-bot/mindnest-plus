@@ -57,32 +57,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MindNest+</title>
+  <meta charset="UTF-8">
+  <title>🌸 MindNest+ Hub</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      scroll-behavior: smooth;
+    html { scroll-behavior: smooth; }
+    #contentFrame {
+      width: 100%;
+      height: 85vh;
+      border: none;
     }
   </style>
 </head>
-<body class="bg-pink-100 text-gray-800 font-sans">
+<body class="bg-pink-100 font-sans text-gray-800">
   <!-- Header -->
-  <header class="bg-pink-300 text-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+  <header class="bg-pink-300 text-white p-4 sticky top-0 z-50 shadow-lg">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">🌸 MindNest+</h1>
       <nav class="space-x-4">
-        <a href="#breathing" class="hover:underline">💨 Breathing</a>
-        <a href="#mood" class="hover:underline">😊 Mood</a>
-        <a href="#quiz" class="hover:underline">🧠 Quiz</a>
-        <a href="#articles" class="hover:underline">📖 Articles</a>
-        <a href="#chatbot" class="hover:underline">💬 Chatbot</a>
-        <a href="#feedback" class="hover:underline">💌 Feedback</a>
+        <button onclick="loadPage('home.html')" class="hover:underline">🏠 Home</button>
+        <button onclick="loadPage('quiz.html')" class="hover:underline">🧠 Quiz</button>
+        <button onclick="loadPage('breathing.html')" class="hover:underline">💨 Breathing</button>
+        <button onclick="loadPage('mood.html')" class="hover:underline">😊 Mood</button>
+        <button onclick="loadPage('articles.html')" class="hover:underline">📖 Articles</button>
+        <button onclick="loadPage('chatbot.html')" class="hover:underline">💬 Chatbot</button>
+        <button onclick="loadPage('feedback.html')" class="hover:underline">💌 Feedback</button>
       </nav>
     </div>
   </header>
 
+  <!-- Display Area -->
+  <main class="max-w-6xl mx-auto mt-6">
+    <iframe id="contentFrame" src="home.html"></iframe>
+  </main>
+
+  <script>
+    function loadPage(page) {
+      document.getElementById("contentFrame").src = page;
+    }
+  </script>
+</body>
+</html>
   <!-- Hero Section -->
   <section class="text-center py-20 bg-pink-200">
     <h2 class="text-4xl font-bold mb-4">Welcome to MindNest+</h2>
@@ -137,171 +152,7 @@
   </footer>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>💨 Breathing Exercise</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .circle {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background-color: #f9a8d4;
-      animation: breathe 8s ease-in-out infinite;
-    }
-    @keyframes breathe {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.5); }
-    }
-  </style>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans text-center p-10">
-  <h1 class="text-4xl font-bold mb-6">💨 Breathing Exercise</h1>
-  <p class="mb-4">Breathe in... Hold... Breathe out... 🌬️</p>
-  <div class="flex justify-center items-center h-96">
-    <div class="circle"></div>
-  </div>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>😊 Mood Tracker</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans p-10">
-  <h1 class="text-3xl font-bold text-center mb-6">😊 Mood Tracker</h1>
-  <form class="max-w-md mx-auto">
-    <label class="block mb-4">
-      How are you feeling today?
-      <select class="w-full mt-2 p-2 border rounded">
-        <option>😀 Happy</option>
-        <option>😐 Neutral</option>
-        <option>😟 Sad</option>
-        <option>😠 Angry</option>
-        <option>😰 Anxious</option>
-      </select>
-    </label>
-    <button class="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-500">Submit</button>
-  </form>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>🧠 Mental Health Quiz</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans p-10">
-  <h1 class="text-3xl font-bold text-center mb-6">🧠 Mental Health Quiz</h1>
-  <form class="max-w-2xl mx-auto space-y-6">
-    <div>
-      <label>1. Do you often feel overwhelmed or anxious?</label><br>
-      <select class="w-full mt-2 p-2 border rounded">
-        <option>Never</option>
-        <option>Sometimes</option>
-        <option>Often</option>
-        <option>Always</option>
-      </select>
-    </div>
-    <div>
-      <label>2. Have you lost interest in activities you usually enjoy?</label><br>
-      <select class="w-full mt-2 p-2 border rounded">
-        <option>No</option>
-        <option>Yes, occasionally</option>
-        <option>Yes, frequently</option>
-      </select>
-    </div>
-    <div>
-      <label>3. Do you experience trouble sleeping or excessive sleep?</label><br>
-      <select class="w-full mt-2 p-2 border rounded">
-        <option>Rarely</option>
-        <option>Sometimes</option>
-        <option>Often</option>
-      </select>
-    </div>
-    <button type="submit" class="bg-pink-400 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
-  </form>
-  <p class="text-center mt-6 font-semibold">🌟 You are doing your best. Keep going!</p>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>📖 Mental Health Article</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans p-10">
-  <h1 class="text-3xl font-bold text-center mb-6">📖 Mental Health Article</h1>
-  <article class="max-w-3xl mx-auto bg-white p-6 rounded shadow">
-    <h2 class="text-2xl font-semibold mb-2">The Power of Taking a Break</h2>
-    <p>In today’s fast-paced world, mental burnout is common. Taking regular breaks helps recharge your mind, improve focus, and enhance emotional resilience. Even a few minutes of deep breathing or stepping outside can reset your mood. Your mental health matters—be kind to yourself. 💖</p>
-  </article>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>💬 MindBot Chat</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    #chatbox { height: 400px; overflow-y: scroll; }
-  </style>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans p-10">
-  <h1 class="text-3xl font-bold text-center mb-6">💬 Talk to MindBot</h1>
-  <div class="max-w-xl mx-auto bg-white p-4 rounded shadow">
-    <div id="chatbox" class="mb-4 p-2 h-96 bg-gray-50 rounded overflow-y-auto">
-      <p><strong>🤖 MindBot:</strong> Hi! I'm here for you. How are you feeling today? 💖</p>
-    </div>
-    <input id="userInput" type="text" placeholder="Type your message..." class="w-full p-2 border rounded mb-2" />
-    <button onclick="sendMessage()" class="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-500 w-full">Send</button>
-  </div>
-  <script>
-    function sendMessage() {
-      const input = document.getElementById("userInput");
-      const chatbox = document.getElementById("chatbox");
-      const userText = input.value.trim();
-      if (!userText) return;
-      chatbox.innerHTML += `<p><strong>🧍 You:</strong> ${userText}</p>`;
-      let reply = "🌟 You're not alone. Everything will be okay.";
-      if (userText.toLowerCase().includes("sad")) reply = "💗 It's okay to feel sad. Want to try a breathing exercise?";
-      if (userText.toLowerCase().includes("anxious")) reply = "🧘‍♀️ Try the 4-7-8 breathing technique. You're doing great.";
-      if (userText.toLowerCase().includes("happy")) reply = "😊 That’s wonderful! Keep shining! ✨";
-      chatbox.innerHTML += `<p><strong>🤖 MindBot:</strong> ${reply}</p>`;
-      input.value = "";
-      chatbox.scrollTop = chatbox.scrollHeight;
-    }
-  </script>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>💌 Feedback</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-pink-100 text-gray-800 font-sans p-10">
-  <h1 class="text-3xl font-bold text-center mb-6">💌 Share Your Feedback</h1>
-  <form class="max-w-xl mx-auto space-y-4">
-    <label class="block">
-      Name:
-      <input type="text" class="w-full mt-1 p-2 border rounded" />
-    </label>
-    <label class="block">
-      Your Experience:
-      <textarea class="w-full mt-1 p-2 border rounded" rows="5"></textarea>
-    </label>
-    <button type="submit" class="bg-pink-400 text-white px-6 py-2 rounded-full hover:bg-pink-500">Submit</button>
-  </form>
-  <nav class="space-x-4">
+<nav class="space-x-4">
   <button onclick="loadPage('home.html')" class="hover:underline">🏠 Home</button>
   <button onclick="loadPage('quiz.html')" class="hover:underline">🧠 Quiz</button>
   <button onclick="loadPage('breathing.html')" class="hover:underline">💨 Breathing</button>
@@ -322,14 +173,4 @@
 </script>
 </body>
 </html>
-<!-- Navigation -->
-<a href="#quiz">🧠 Quiz</a>
-<a href="#breathing">💨 Breathing</a>
-<a href="#chatbot">💬 Chatbot</a>
-...
 
-<!-- All sections below -->
-<section id="quiz"> ... Quiz content ... </section>
-<section id="breathing"> ... Breathing content ... </section>
-<section id="chatbot"> ... Chatbot content ... </section>
-...
