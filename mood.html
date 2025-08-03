@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mood Tracker 😊</title>
+  <link rel="stylesheet" href="mood-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>How are you feeling today?</h1>
+    <div class="emoji-grid">
+      <span onclick="logMood('😊')">😊</span>
+      <span onclick="logMood('😢')">😢</span>
+      <span onclick="logMood('😠')">😠</span>
+      <span onclick="logMood('😰')">😰</span>
+      <span onclick="logMood('😌')">😌</span>
+      <span onclick="logMood('😴')">😴</span>
+    </div>
+
+    <h2>Your Mood History</h2>
+    <ul id="mood-log"></ul>
+  </div>
+
+  <script src="mood.js"></script>
+</body>
+</html>
