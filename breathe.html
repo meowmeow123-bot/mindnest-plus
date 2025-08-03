@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MindNest+ Breathing & Meditation</title>
+  <link rel="stylesheet" href="breathe-style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Breathing & Meditation Zone</h1>
+
+    <section id="breathing-exercise">
+      <h2>Circle Breathing Exercise</h2>
+      <div class="circle" id="circle"></div>
+      <p id="breathe-text">Breathe In</p>
+    </section>
+
+    <section id="activity">
+      <h2>Mindfulness Activities</h2>
+      <button onclick="nextActivity()">Get Activity</button>
+      <p id="activity-text">Click above to start!</p>
+    </section>
+
+    <section id="meditation-music">
+      <h2>Meditation Music</h2>
+      <audio controls loop>
+        <source src="meditation.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </section>
+  </div>
+
+  <script src="breathe.js"></script>
+</body>
+</html>
