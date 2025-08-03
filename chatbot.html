@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💬 MindBot Chat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    #chatbox { height: 400px; overflow-y: scroll; }
+  </style>
+</head>
+<body class="bg-pink-100 text-gray-800 font-sans p-10">
+  <h1 class="text-3xl font-bold text-center mb-6">💬 Talk to MindBot</h1>
+  <div class="max-w-xl mx-auto bg-white p-4 rounded shadow">
+    <div id="chatbox" class="mb-4 p-2 h-96 bg-gray-50 rounded overflow-y-auto">
+      <p><strong>🤖 MindBot:</strong> Hi! I'm here for you. How are you feeling today? 💖</p>
+    </div>
+    <input id="userInput" type="text" placeholder="Type your message..." class="w-full p-2 border rounded mb-2" />
+    <button onclick="sendMessage()" class="bg-pink-400 text-white px-4 py-2 rounded hover:bg-pink-500 w-full">Send</button>
+  </div>
+  <script>
+    function sendMessage() {
+      const input = document.getElementById("userInput");
+      const chatbox = document.getElementById("chatbox");
+      const userText = input.value.trim();
+      if (!userText) return;
+      chatbox.innerHTML += `<p><strong>🧍 You:</strong> ${userText}</p>`;
+      let reply = "🌟 You're not alone. Everything will be okay.";
+      if (userText.toLowerCase().includes("sad")) reply = "💗 It's okay to feel sad. Want to try a breathing exercise?";
+      if (userText.toLowerCase().includes("anxious")) reply = "🧘‍♀️ Try the 4-7-8 breathing technique. You're doing great.";
+      if (userText.toLowerCase().includes("happy")) reply = "😊 That’s wonderful! Keep shining! ✨";
+      chatbox.innerHTML += `<p><strong>🤖 MindBot:</strong> ${reply}</p>`;
+      input.value = "";
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+  </script>
+</body>
+</html>
